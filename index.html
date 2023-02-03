@@ -1,0 +1,66 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/sf-sports-night" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/division-one" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div>
+            <div class="container">
+                <div class="team-container">
+                    <div id="home-name-container" class="name-container">
+                        <h3>HOME</h3>
+                    </div>
+                    <div id="home-score-container" class="score-container">
+                        <h2 class="score" id="home-score">0</h2>
+                    </div>
+                    <button class="score-button" id="home-button-one" onclick="incrementHomeScoreOne()">+1</button>
+                    <button class="score-button" id="home-button-two" onclick="incrementHomeScoreTwo()">+2</button>
+                    <button class="score-button" id="home-button-three" onclick="incrementHomeScoreThree()">+3</button>
+                    <div class="new-button-container">
+                        <button class="middle-button" id="new-game-button" onclick="newGame()">NEW GAME</button>
+                    </div>
+                </div>
+                <div class="controls-container">
+                    <div id="timer-container" class="timer-container">
+                        <h2 class="timer"><span id="minutes">00</span>:<span id="seconds">00</span></h2>
+                    </div>
+                    <div class="vl"></div>
+                    <div class="pause-button-container">
+                        <button class="middle-button" id="pause-button" onclick="pause()">PAUSE</button>
+                    </div>
+                    <!-- <div class="rule-top"></div> -->
+                    <h3 class="score-log-text">Score log</h3>
+                    <div class="rule"></div>
+                </div>
+                <div class="team-container">
+                    <div id="guest-name-container" class="name-container">
+                        <h3>GUEST</h3>
+                    </div>
+                    <div id="guest-score-container" class="score-container">
+                        <h2 class="score" id="guest-score">0</h2>
+                    </div>
+                    <button class="score-button" id="guest-button-one" onclick="incrementGuestScoreOne()">+1</button>
+                    <button class="score-button" id="guest-button-two" onclick="incrementGuestScoreTwo()">+2</button>
+                    <button class="score-button" id="guest-button-three" onclick="incrementGuestScoreThree()">+3</button>
+                    <div class="clear-button-container">
+                        <button class="middle-button" id="clear-button" onclick="clearBoard()">CLEAR BOARD</button>
+                    </div>
+                </div>
+            </div>
+            <div class="logs-container">
+                <div class="score-record-container">
+                    <ul class="logs" id="logs-home"></ul>
+                </div>
+                <div class="score-record-container">
+                    <ul class="logs" id="logs-guest"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
