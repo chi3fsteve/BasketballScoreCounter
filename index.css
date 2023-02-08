@@ -146,7 +146,7 @@ h3 {
 
 #clear-button {
     color: #9AABD8;
-    text-shadow: 0 0 5px #ff0000;
+    text-shadow: 0 0 5px #04e0e0;
 }
 
 .pause-button-container {
@@ -157,7 +157,7 @@ h3 {
 #pause-button {
     width: 100px;
     color: #9AABD8;
-    text-shadow: 0 0 4px #9AABD8;
+    text-shadow: 0 0 5px #04e0e0;;
 }
 
 .middle-button:hover {
