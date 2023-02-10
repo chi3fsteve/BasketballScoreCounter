@@ -43,6 +43,7 @@ function startTimer() {
         }
     }, 1000);
 }
+window.startTimer = startTimer
 
 function clearBoard() {
     clearInterval(interval);
@@ -58,6 +59,7 @@ function clearBoard() {
     pauseButtonEl.textContent = "PAUSE"
     leader()
 }
+window.clearBoard = clearBoard
 
 function pause() {
     isPaused = !isPaused
@@ -68,6 +70,7 @@ function pause() {
         pauseButtonEl.textContent = "PAUSE"
     }
 }
+window.pause = pause
 
 function leader() {
     if (homeScore == guestScore) {
@@ -89,6 +92,7 @@ function leader() {
         guestNameContainerEl.className = "name-container-winning";
     }
 }
+window.leader = leader
 
 function newGame() {
     homeScore = 0
@@ -101,6 +105,7 @@ function newGame() {
     leader()
     startTimer()
 }
+window.newGame = newGame
 
 function incrementHomeScoreOne() {
     homeScore += 1
@@ -111,6 +116,7 @@ function incrementHomeScoreOne() {
 
     homeLogsEl.appendChild(log);
 }
+window.incrementHomeScoreOne = incrementHomeScoreOne
 
 function incrementHomeScoreTwo() {
     homeScore += 2
@@ -120,6 +126,7 @@ function incrementHomeScoreTwo() {
     log.textContent = `${minutes}:${seconds < 10 ? "0" + seconds : seconds} +2 ${homeScore}`;
     homeLogsEl.appendChild(log);
 }
+window.incrementHomeScoreTwo = incrementHomeScoreTwo
 
 function incrementHomeScoreThree() {
     homeScore += 3
@@ -129,6 +136,7 @@ function incrementHomeScoreThree() {
     log.textContent = `${minutes}:${seconds < 10 ? "0" + seconds : seconds} +3 ${homeScore}`;
     homeLogsEl.appendChild(log);
 }
+window.incrementHomeScoreThree = incrementHomeScoreThree
 
 function incrementGuestScoreOne() {
     guestScore += 1
@@ -138,6 +146,7 @@ function incrementGuestScoreOne() {
     log.textContent = `${minutes}:${seconds < 10 ? "0" + seconds : seconds} +1 ${guestScore}`;
     guestLogsEl.appendChild(log);
 }
+window.incrementGuestScoreOne = incrementGuestScoreOne
 
 function incrementGuestScoreTwo() {
     guestScore += 2
@@ -147,6 +156,7 @@ function incrementGuestScoreTwo() {
     log.textContent = `${minutes}:${seconds < 10 ? "0" + seconds : seconds} +2 ${guestScore}`;
     guestLogsEl.appendChild(log);
 }
+window.incrementGuestScoreTwo = incrementGuestScoreTwo
 
 function incrementGuestScoreThree() {
     guestScore += 3
@@ -156,3 +166,4 @@ function incrementGuestScoreThree() {
     log.textContent = `${minutes}:${seconds < 10 ? "0" + seconds : seconds} +3 ${guestScore}`;
     guestLogsEl.appendChild(log);
 }
+window.incrementGuestScoreThree = incrementGuestScoreThree

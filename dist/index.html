@@ -2,14 +2,15 @@
 <head>
     <title>Basketball Score Counter</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <link rel="stylesheet" href="index.css">
+    
     <link href="https://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/sf-sports-night" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/division-one" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-0c9bc522.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAA6FJREFUWEfNl19MU1ccx7+/W9pKb3srLfhADJCYMSP6sKDTDUyM8U/UuU2fpjHK8N+iCUTdH15mDHvxP5REo6g4jdE9OdSgEY3RCNv8Q3yRTDHO6YwPKxTa3lvXlt6znEsgpb39l2Cu5+km95zv+Zzz+3sIWQ7fXjgtVnE5E2ghMfYRQGWLWl0uvvzmFp8PYH8zokeksluRsHLV1QB/NtKUaVLgkKNcyFN/IOArxsgWP39Rq7Y/BxgnQ8RCDPhFHRb2SbuCfen2SAnwZg9skktshEp1AMx6IqkA4uZGIbCWgE/ZXbwHIT0NXQC/x/qBoJp/JUJFOvosALTljKFXFaKrnPXhZ4l6SQBzp5dU/rg4eG3BtGhRJvNkC8B1bj83e3+64Vh278mrnnjdcQCt6wvLm7rF7miMCnfOV7C+8m1ahmwBzvTko+muCLOJ9e+oUqq2nO0f84sxAG5zh9N+/89/8yrqLkvolwXsXxHAkvJISohsADr7LPi+Q0KhXYXn8wBmTBnuDfrlj0d9YgxAbhEPQqVdfLc+bx7WXXBCtDBc+XoQdivThcgEIIcJK08XQIkQzq3xo7xoeERHYIfsdcq3/FMD0ELNxB7He3tLlw2nHthQX62gdo6+KTIBtD3Ih6dLxMY5IdRVjwuCqBqjmTxENQDZI54Co9r4Y/pChKUn3SiWYmivGRwhTRiZAL48U4DXQyZc3zwAty3hFom12euVjcQznDVffJOYZPhe29oldL+w4FLNIMoKYjkBvBoyaddfVRbB0VWBpLU8WYXfKsUkN4lrQHRez8g/Pxzx3sYlQXxREc4J4FKvFbs7HdgxX0HN7BTRxNhaCnrsJ4hhkx7AHy/N2HrRqQlwoVxMwMH5AY6v9mNeaVTXiRnhJMnN4kOAKvVmvPYLWNHmwrIPw9i7PJgTQMNVB649taKj1oepTjVFKLMekpvt/QDcejN4+Hx6xI1PSiM4tjrZjumc8JuLEn5/acFv2we0cE4xBmjejBKOl7IoeRUBZhMweVLyKQZCgqbrtiX/G/pPQDQGFImpTq8tZcYDGG4Cw53Q+DA0OhGlS8Xb2yV0vbDgcs0gSnNMxf8MmfDZ6QJUl0VwJF0qNrwYvRflWLsFIxsSDpDYknllAQcmqCX7rkPCFLuK5nQtGYeIb0p59dswQU3p2Z58HM7UlI4Wi+pZJZUNCya+Lb/zl9nb2JmhLR+FMPRhMgph6NMsvnYb9jhNbCDe1fP8f9LodheQih+qAAAAAElFTkSuQmCC">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAZhJREFUOE+lUzFIAlEY/t6ZFyen2CA0uAjmHlpNNghlOLRVWBEFGU0VRUTQ2FBEoREUKhRBSbU1GBY55FQZzWbg4hA0JHoonXkXd6YcIlTcWx7v+//3/e//3vcTNKyPbV1ni4aaIQSuo0fGIoUnu0oZUUT8qyIE25aKz8orpHYQd8BwFBsgwDQAGT9+YuTwhL1UTxOBMCtw82QRMignng+ZmUgWsS1P3tmuF+oFmhDgrUBhOWpIeM1wD19kSzJBwc8G46+0L3Svw4k3Bw1V5WgkqAjAWMQIX08RLisf0i9wM0TqWauhnqTXrF7p4bJ+oq+Db0pwk6Zxm27FhqcgxcVyRbCTgp/dJ8CshNxlaFynaKwPcE0J1mIs+m08ei3VAiJwQLgAm4IImwS8cxTmLg2IjOaaEnhPjdgdzMPE/uhE8EL2xk08RaCVbkg9HiYZTHdXVU9mZRgOc1neww8MphylukaCiLJ6AtUtKEVMZGjEfhHRbePhVIqo+htVG6lm5bMsYpt/tPJK1JAYUVpZNoWaYVKO53/H+RuprQasI4MN3QAAAABJRU5ErkJggg==">
+    <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiIiwic2hvcnRfbmFtZSI6IiIsImljb25zIjpbeyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmciLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn1dLCJ0aGVtZV9jb2xvciI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZmZmZiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIn0=">
+  <link rel="stylesheet" href="/assets/index-4fe84f15.css">
 </head>
 <body>
     <div class="main">
@@ -66,6 +67,6 @@
             </div>
         </div>
     </div>
-    <script src="index.js" type="module"></script>
+    <script src="index.js"></script>
 </body>
 </html>
